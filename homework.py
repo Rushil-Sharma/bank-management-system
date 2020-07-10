@@ -85,11 +85,11 @@ if fail == no :
         action = int(input("PRESS THE BELOW NUMBER TO DO VARIOUS THING'S \nPress 1 to withdraw \nPress 2 deposit \nPress 3 to check your current ballence\nPress 4 to transfer some money to an other account\nPress 5 to exit\n:- "))
         if action == 1 :
             withdraw = int(input("Enter the amount you want to withdraw:- "))
+            if withdraw <= bal:
             bal = int(bal - withdraw)
             print("Done Bal =",bal)
-            if withdraw >= bal:
+            elif withdraw >= bal:
                 print("Not enough money !!!")
-
         elif action == 2 :
             deposit = int(input("Enter the amount you want to deposit:- "))
             bal = int(bal + deposit)
